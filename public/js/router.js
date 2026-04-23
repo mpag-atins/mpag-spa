@@ -1,5 +1,3 @@
-import { gallery } from "./views";
-
 let pageUrls = {
 about: '/index.html?about',
 contact:'/index.html?contact',
@@ -27,7 +25,7 @@ document.querySelector('#gallery-link').addEventListener('click', (event) => {
 let stateObj = { page: 'gallery' };
 document.title = 'gallery';
 history.pushState(stateObj, "gallery", "?gallery");
-RenderContactPage();
+RenderGalleryPage();
 });
 
 function RenderAboutPage() {
@@ -42,7 +40,7 @@ document.querySelector('main').innerHTML = `
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>`;
 }
 
-function RendergalleryPage() {
+function RenderGalleryPage() {
 document.querySelector('main').innerHTML = `
 <h1 class="title">Gallery</h1>
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>`;
