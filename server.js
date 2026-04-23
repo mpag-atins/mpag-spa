@@ -37,7 +37,7 @@ app.post('/api/contact', (req, res) => {
 
 // Wszystkie pozostałe trasy → index.html (obsługa SPA routing)
 app.get('*', (req, res) => {
-  res.sendFile(join(__dirname, 'public', 'index.html'));
+  res.sendFile(join(__dirname, '/', 'index.html'));
 });
 
 app.listen(PORT, () => {
