@@ -31,6 +31,60 @@ font-size: 1rem;
 }
 .title {
 font-size: 3rem;
+
+
+  .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery-grid img.loaded {
+      opacity: 1;
+    }
+
+    /* Modal */
+    #modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #modal.open { display: flex; }
+
+    #modal img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+
+    #modal-close {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: white;
+      border: none;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
 }
 body.dark-mode {
 background-color: #121212;
