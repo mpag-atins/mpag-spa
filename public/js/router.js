@@ -1,6 +1,9 @@
+import { gallery } from "./views";
+
 let pageUrls = {
 about: '/index.html?about',
-contact:'/index.html?contact'
+contact:'/index.html?contact',
+gallery: '/index.html?gallery'
 };
 function OnStartUp() {
 popStateHandler();

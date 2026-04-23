@@ -3,7 +3,7 @@
 // ==========================================
 
 import { Router } from './router.js';
-import { HomeView, AboutView, ContactView, NotFoundView } from './views.js';
+import { HomeView, AboutView, ContactView, NotFoundView, gallery } from './views.js';
 
 const app = document.getElementById('app');
 
@@ -92,6 +92,7 @@ const router = new Router({
   '/about':   () => render(AboutView),
   '/contact': () => render(ContactView),
   '*':        () => render(NotFoundView),
+  '/gallery': () => render(gallery),
 });
 
 router.start();
