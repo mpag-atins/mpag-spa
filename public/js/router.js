@@ -68,7 +68,7 @@ function RenderGalleryPage() {
   IMAGES.forEach((filename) => {
     const img = document.createElement('img');
     img.alt = filename;
-    img.dataset.src = `/images/${filename}`;
+    img.dataset.src = `./images/${filename}`;  // względna ścieżka
     grid.appendChild(img);
 
     img.addEventListener('click', async () => {
@@ -99,7 +99,7 @@ function popStateHandler() {
 let loc = window.location.href.toString().split(window.location.host)[1];
 if (loc === pageUrls.contact){ RenderContactPage(); }
 if(loc === pageUrls.about){ RenderAboutPage(); }
-if(loc === pageUrls.gallery){ RendergalleryPage(); }
+if(loc === pageUrls.gallery){ RenderGalleryPage(); }
 }
 
 window.onpopstate = popStateHandler;
